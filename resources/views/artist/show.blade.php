@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.main')
 
 @section('title', 'Fiche d\'un artiste')
 
@@ -6,7 +7,7 @@
     <h1>{{ $artist->firstname }} {{ $artist->lastname }}</h1>  
 
     <div><a href="{{ route('artist.edit' ,$artist->id) }}">Modifier</a></div>
-    
+
     <form method="post" action="{{ route('artist.delete', $artist->id) }}">
 		@csrf
 		<input type="hidden" name="method" value="DELETE">
