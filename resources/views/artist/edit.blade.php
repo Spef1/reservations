@@ -1,4 +1,3 @@
-@extends('layouts.app')
 @extends('layouts.main')
 
 @section('title', 'Modifier un artiste')

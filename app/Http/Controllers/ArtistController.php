@@ -84,7 +84,12 @@ class ArtistController extends Controller
      */
     public function edit($id)
     {
-        //
+        $artist = Artist::find($id);
+        
+        return view('artist.edit',[
+            'artist' => $artist,
+        ]);
+
     }
 
     /**
