@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //$table->string('name', 60)->change();	//Ne fonctionne pas avec ENUM
-            $table->renameColumn('name', 'firstname');
+          //  $table->renameColumn('name', 'firstname'); // fonctionne pas avec MySQL 8 et 5.7
             
             $table->string('lastname', 60)->after('name');
             $table->string('login', 30)->after('id');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->unique('login', 'users_login_unique');
         });
 
-        DB::statement('ALTER TABLE users MODIFY COLUMN firstname VARCHAR(60)');
+        DB::statement('ALTER TABLE `users` CHANGE `name` `firstname` VARCHAR(60)');
     }
 
     /**
