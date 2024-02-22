@@ -16,7 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                 <!-- Lien pour la page des artistes -->
+                    <x-nav-link :href="route('artist.index')" :active="request()->routeIs('artist.index')">
+                        {{ __('Artistes') }}
+                    </x-nav-link>
             </div>
+
+            
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -69,6 +75,11 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('artist.index')" :active="request()->routeIs('artist.index')">
+                {{ __('Artistes') }}
             </x-responsive-nav-link>
         </div>
 

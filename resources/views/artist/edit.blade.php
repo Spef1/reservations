@@ -1,8 +1,9 @@
 @extends('layouts.main')
-
+<x-app-layout>
 @section('title', 'Modifier un artiste')
 
 @section('content')
+
     <h2>Modifier un artiste</h2>
 
     <form action="{{route('artist.update' ,$artist->id) }}" method="post">
@@ -56,3 +57,4 @@
     <nav><a href="{{ route('artist.index') }}">Retour à l'index</a></nav>
 @endsection
 
+</x-app-layout>

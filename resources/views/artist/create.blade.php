@@ -1,8 +1,10 @@
+<x-app-layout>
 @extends('layouts.main')
 
 @section('title', 'Ajouter un artiste')
 
 @section('content')
+
     <h2>Ajouter un artiste</h2>
 
     <form action="{{ route('artist.store') }}" method="post">
@@ -47,3 +49,4 @@
         </ul>
     </div>
 @endif
+</x-app-layout>

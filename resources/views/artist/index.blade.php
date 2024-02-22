@@ -1,14 +1,13 @@
+<x-app-layout>
 @extends('layouts.main')
-
 @section('title', 'Liste des artistes')
-
 @section('content')
+
     <h1>Liste des {{ $resource }}</h1>
     <ul>
         <li><a href="{{ route('artist.create') }}">Ajouter</a></li>    
     </ul>
-
-    <table>
+    <table >
         <thead>
             <tr>
                 <th>Firstname</th>
@@ -26,5 +25,6 @@
         @endforeach
         </tbody>
     </table>
+    </x-app-layout>
 @endsection
 

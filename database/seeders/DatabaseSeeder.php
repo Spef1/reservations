@@ -17,6 +17,14 @@ class DatabaseSeeder extends Seeder
             ArtistSeeder::class,
             UserSeeder::class,
         ]);
+        // $this->call(UserSeeder::class);
+        $this->call([
+            ArtistSeeder::class,
+            TypeSeeder::class,
+            LocalitySeeder::class,
+            RoleSeeder::class,
+        ]);
+
     }
 }
 
