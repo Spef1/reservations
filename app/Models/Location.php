@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Locality;
 
 class Location extends Model
 {
@@ -43,7 +44,7 @@ use HasFactory;
      */
     public function locality()
     {
-        return $this->belongsTo('App\Locality');
+        return $this->belongsTo('App\Models\Locality');
     }
     public function shows()
     {
