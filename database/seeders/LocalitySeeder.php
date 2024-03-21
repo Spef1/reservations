@@ -13,10 +13,13 @@ class LocalitySeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         //Empty the table first
        // Locality::truncate();
+       DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        Locality::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
         
         //Define data
        $localities = [
@@ -31,9 +34,7 @@ class LocalitySeeder extends Seeder
         //Insert data in the table
         DB::table('localities')->insert($localities);
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        Locality::truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        
 
     }
 }
