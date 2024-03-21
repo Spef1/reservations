@@ -1,5 +1,6 @@
 <?php
 
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -17,7 +18,7 @@ class LocationSeeder extends Seeder
     public function run()
     {
         //Empty the table first
-        Location::truncate();
+       // Location::truncate();
 
         //Define data
         $locations = [
@@ -66,5 +67,10 @@ class LocationSeeder extends Seeder
         }
 
         DB::table('locations')->insert($locations);
+        //Empty the table first
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        Location::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+
     }
 }

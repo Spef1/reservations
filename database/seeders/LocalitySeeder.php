@@ -16,11 +16,11 @@ class LocalitySeeder extends Seeder
     public function run(): void
     {
         //Empty the table first
-        Locality::truncate();
+       // Locality::truncate();
         
         //Define data
        $localities = [
-            ['locality'=>'comédien'],
+            ['locality'=>'BRUXELLES'],
             ['locality'=>'scénographe'],
             ['locality'=>'auteur'],
         ];
