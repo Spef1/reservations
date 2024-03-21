@@ -20,9 +20,12 @@ class LocalitySeeder extends Seeder
         
         //Define data
        $localities = [
-            ['locality'=>'BRUXELLES'],
-            ['locality'=>'scénographe'],
-            ['locality'=>'auteur'],
+            ['postal_code'=>'1000',
+                'locality'=>'BRUXELLES'],
+            ['postal_code'=>'1170',
+                'locality'=>'IXELLES'],
+            ['postal_code'=>'1070',
+            'locality'=>'WEMMEL'],
         ];
         
         //Insert data in the table
